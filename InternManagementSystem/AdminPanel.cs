@@ -44,5 +44,11 @@ namespace InternManagementSystem
         {
             DatabaseConnection.GetRight();
         }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+
+            DatabaseConnection.DisplayAndSearch("select id,name,phone from intern where name like '%"+searchBox.Text.Trim() + "%'", dataGridView);
+        }
     }
 }
