@@ -125,5 +125,16 @@ namespace InternManagementSystem
             DatabaseConnection.addIntern(intern);
             Clear();
         }
+
+        private void internImageBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "PNG Files(*.png)|*.png|JPG Files(*.jpg)|*.jpg|All Files(*.*)|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                String imgLocation = openFileDialog.FileName;
+                internImageBox.ImageLocation = imgLocation;
+            }
+        }
     }
 }

@@ -20,32 +20,7 @@ namespace InternManagementSystem
 
         public Intern(string internName, string internEmail, string internPhone, DateTime internDoB, string internRole, string internSkills)
         {
-            /*
-            if (string.IsNullOrEmpty(internName))
-            {
-                throw new ArgumentException($"'{nameof(internName)}' cannot be null or empty.", nameof(internName));
-            }
-
-            if (string.IsNullOrEmpty(internEmail))
-            {
-                throw new ArgumentException($"'{nameof(internEmail)}' cannot be null or empty.", nameof(internEmail));
-            }
-
-            if (string.IsNullOrEmpty(internPhone))
-            {
-                throw new ArgumentException($"'{nameof(internPhone)}' cannot be null or empty.", nameof(internPhone));
-            }
-
-            if (string.IsNullOrEmpty(internRole))
-            {
-                throw new ArgumentException($"'{nameof(internRole)}' cannot be null or empty.", nameof(internRole));
-            }
-
-            if (string.IsNullOrEmpty(internSkills))
-            {
-                throw new ArgumentException($"'{nameof(internSkills)}' cannot be null or empty.", nameof(internSkills));
-            }
-            */
+         
 
             InternName = internName;
             InternEmail = internEmail;

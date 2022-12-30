@@ -233,6 +233,7 @@ namespace InternManagementSystem
             this.internImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.internImageBox.TabIndex = 8;
             this.internImageBox.TabStop = false;
+            this.internImageBox.Click += new System.EventHandler(this.internImageBox_Click);
             // 
             // addIntern_btn
             // 
