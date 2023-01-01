@@ -87,5 +87,20 @@ namespace InternManagementSystem
            
         }
 
+        public static void DeleteIntern(Object id)
+        {
+            String sql = "delete from intern where id = "+id;
+            MySqlConnection connection = getDbConnection();
+            MySqlCommand command = new MySqlCommand(sql,connection);
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Deleted!","Informaion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }catch (Exception e)
+            {
+                MessageBox.Show("There is some error to delete!", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error );
+            }
+        }
+
     }
 }

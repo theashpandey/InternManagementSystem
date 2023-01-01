@@ -35,11 +35,14 @@ namespace InternManagementSystem
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.certificate_btn = new System.Windows.Forms.Label();
             this.giveTask_btn = new System.Windows.Forms.Label();
             this.add_intern_btn = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.left_btn = new System.Windows.Forms.PictureBox();
+            this.right_btn = new System.Windows.Forms.PictureBox();
             this.searchPictureBox = new System.Windows.Forms.PictureBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,16 +52,13 @@ namespace InternManagementSystem
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.right_btn = new System.Windows.Forms.PictureBox();
-            this.left_btn = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.left_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.right_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.right_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.left_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,17 @@ namespace InternManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 60);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Admin Dashboard";
             // 
             // panel2
             // 
@@ -142,6 +153,32 @@ namespace InternManagementSystem
             this.panel3.Size = new System.Drawing.Size(784, 501);
             this.panel3.TabIndex = 2;
             // 
+            // left_btn
+            // 
+            this.left_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.left_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.left_btn.Image = global::InternManagementSystem.Properties.Resources.icons8_right_arrow_64__1_;
+            this.left_btn.Location = new System.Drawing.Point(658, 88);
+            this.left_btn.Name = "left_btn";
+            this.left_btn.Size = new System.Drawing.Size(25, 25);
+            this.left_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.left_btn.TabIndex = 7;
+            this.left_btn.TabStop = false;
+            this.left_btn.Click += new System.EventHandler(this.left_btn_Click);
+            // 
+            // right_btn
+            // 
+            this.right_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.right_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.right_btn.Image = global::InternManagementSystem.Properties.Resources.icons8_right_arrow_64;
+            this.right_btn.Location = new System.Drawing.Point(708, 88);
+            this.right_btn.Name = "right_btn";
+            this.right_btn.Size = new System.Drawing.Size(25, 25);
+            this.right_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.right_btn.TabIndex = 6;
+            this.right_btn.TabStop = false;
+            this.right_btn.Click += new System.EventHandler(this.right_btn_Click);
+            // 
             // searchPictureBox
             // 
             this.searchPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -185,6 +222,7 @@ namespace InternManagementSystem
             this.dataGridView.ShowEditingIcon = false;
             this.dataGridView.Size = new System.Drawing.Size(682, 331);
             this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // Column1
             // 
@@ -265,43 +303,6 @@ namespace InternManagementSystem
             this.searchBox.TabIndex = 1;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
-            // right_btn
-            // 
-            this.right_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.right_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.right_btn.Image = global::InternManagementSystem.Properties.Resources.icons8_right_arrow_64;
-            this.right_btn.Location = new System.Drawing.Point(708, 88);
-            this.right_btn.Name = "right_btn";
-            this.right_btn.Size = new System.Drawing.Size(25, 25);
-            this.right_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.right_btn.TabIndex = 6;
-            this.right_btn.TabStop = false;
-            this.right_btn.Click += new System.EventHandler(this.right_btn_Click);
-            // 
-            // left_btn
-            // 
-            this.left_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.left_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.left_btn.Image = global::InternManagementSystem.Properties.Resources.icons8_right_arrow_64__1_;
-            this.left_btn.Location = new System.Drawing.Point(658, 88);
-            this.left_btn.Name = "left_btn";
-            this.left_btn.Size = new System.Drawing.Size(25, 25);
-            this.left_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.left_btn.TabIndex = 7;
-            this.left_btn.TabStop = false;
-            this.left_btn.Click += new System.EventHandler(this.left_btn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Admin Dashboard";
-            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,10 +323,10 @@ namespace InternManagementSystem
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.left_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.right_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.right_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.left_btn)).EndInit();
             this.ResumeLayout(false);
 
         }

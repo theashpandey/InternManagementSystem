@@ -55,5 +55,13 @@ namespace InternManagementSystem
             DatabaseConnection.GetLeft();
         }
 
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 2)
+            {
+                DatabaseConnection.DeleteIntern(dataGridView.CurrentRow.Cells[3].Value);
+                Display();
+            }
+        }
     }
 }
