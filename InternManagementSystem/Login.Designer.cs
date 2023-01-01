@@ -56,7 +56,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 300);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // login_btn
             // 
@@ -83,7 +82,6 @@
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(211, 26);
             this.passwordBox.TabIndex = 4;
-            this.passwordBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -96,7 +94,6 @@
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Password:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // usernameBox
             // 
@@ -106,7 +103,6 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(211, 26);
             this.usernameBox.TabIndex = 2;
-            this.usernameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -119,7 +115,6 @@
             this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Username:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -131,7 +126,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // IMT
             // 
@@ -145,7 +139,6 @@
             this.Name = "IMT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intern Management System";
-            this.Load += new System.EventHandler(this.LogIn_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

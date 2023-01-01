@@ -108,15 +108,6 @@ namespace InternManagementSystem
                 nameBox.ForeColor = Color.Black;
             }
         }
-
-
-        private void back_btn_Click(object sender, EventArgs e)
-        {
-            AdminPanel adminPanel = new AdminPanel();
-            this.Hide();
-            adminPanel.Show();
-        }
-
        
         private void addIntern_btn_Click(object sender, EventArgs e)
         {
@@ -135,6 +126,13 @@ namespace InternManagementSystem
                 String imgLocation = openFileDialog.FileName;
                 internImageBox.ImageLocation = imgLocation;
             }
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            AdminPanel adminPanel = new AdminPanel();
+            this.Hide();
+            adminPanel.Show();
         }
     }
 }

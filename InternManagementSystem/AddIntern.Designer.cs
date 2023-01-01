@@ -32,7 +32,6 @@ namespace InternManagementSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddIntern));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.back_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.internRoleBox = new System.Windows.Forms.ComboBox();
@@ -49,15 +48,17 @@ namespace InternManagementSystem
             this.phoneBox = new System.Windows.Forms.TextBox();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.nameBox = new System.Windows.Forms.TextBox();
+            this.backbtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.internImageBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(159)))), ((int)(((byte)(143)))));
-            this.panel1.Controls.Add(this.back_btn);
+            this.panel1.Controls.Add(this.backbtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -65,29 +66,19 @@ namespace InternManagementSystem
             this.panel1.Size = new System.Drawing.Size(984, 60);
             this.panel1.TabIndex = 1;
             // 
-            // back_btn
-            // 
-            this.back_btn.BackgroundImage = global::InternManagementSystem.Properties.Resources.icons8_back_arrow_48__1_;
-            this.back_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(159)))), ((int)(((byte)(143)))));
-            this.back_btn.Location = new System.Drawing.Point(12, 3);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(48, 48);
-            this.back_btn.TabIndex = 1;
-            this.back_btn.UseVisualStyleBackColor = true;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
-            // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(128, 9);
+            this.label1.Location = new System.Drawing.Point(465, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Intern";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -226,6 +217,7 @@ namespace InternManagementSystem
             // internImageBox
             // 
             this.internImageBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.internImageBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.internImageBox.Image = global::InternManagementSystem.Properties.Resources.icons8_user_100;
             this.internImageBox.Location = new System.Drawing.Point(133, 48);
             this.internImageBox.Name = "internImageBox";
@@ -239,6 +231,7 @@ namespace InternManagementSystem
             // 
             this.addIntern_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addIntern_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(159)))), ((int)(((byte)(143)))));
+            this.addIntern_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addIntern_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addIntern_btn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addIntern_btn.ForeColor = System.Drawing.Color.White;
@@ -293,8 +286,21 @@ namespace InternManagementSystem
             this.nameBox.Enter += new System.EventHandler(this.nameBox_Enter);
             this.nameBox.Leave += new System.EventHandler(this.nameBox_Leave);
             // 
+            // backbtn
+            // 
+            this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backbtn.Image = global::InternManagementSystem.Properties.Resources.icons8_back_arrow_48__1_;
+            this.backbtn.Location = new System.Drawing.Point(3, 3);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(48, 48);
+            this.backbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backbtn.TabIndex = 2;
+            this.backbtn.TabStop = false;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            // 
             // AddIntern
             // 
+            this.AcceptButton = this.addIntern_btn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
@@ -311,6 +317,7 @@ namespace InternManagementSystem
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.internImageBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,6 +341,6 @@ namespace InternManagementSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox skillsBox;
         private System.Windows.Forms.ComboBox internRoleBox;
-        private System.Windows.Forms.Button back_btn;
+        private PictureBox backbtn;
     }
 }

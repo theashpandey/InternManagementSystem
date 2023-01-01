@@ -19,12 +19,7 @@ namespace InternManagementSystem
 
       
 
-        private void addIntern_btn_Click(object sender, EventArgs e)
-        {
-            AddIntern addIntern = new AddIntern();
-            this.Hide();
-            addIntern.Show();
-        }
+      
         public void Display()
         {
             DatabaseConnection.DisplayAndSearch("select id,name,phone from intern", dataGridView);
@@ -35,20 +30,30 @@ namespace InternManagementSystem
             Display();
         }
 
-        private void gridLeft_Btn_Click(object sender, EventArgs e)
-        {
-            DatabaseConnection.GetLeft();
-        }
-
-        private void gridright_btn_Click(object sender, EventArgs e)
-        {
-            DatabaseConnection.GetRight();
-        }
-
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
 
             DatabaseConnection.DisplayAndSearch("select id,name,phone from intern where name like '%"+searchBox.Text.Trim() + "%'", dataGridView);
         }
+
+        private void add_intern_btn_Click(object sender, EventArgs e)
+        {
+            AddIntern addIntern = new AddIntern();
+            this.Hide();
+            addIntern.Show();
+        }
+
+        private void right_btn_Click(object sender, EventArgs e)
+        {
+
+            DatabaseConnection.GetRight();
+        }
+
+        private void left_btn_Click(object sender, EventArgs e)
+        {
+
+            DatabaseConnection.GetLeft();
+        }
+
     }
 }
